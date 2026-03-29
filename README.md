@@ -10,7 +10,6 @@
         - [1.2. 아키텍쳐](#12-아키텍쳐)
         - [1.3. 사용기술](#13-사용기술)
     - [2. 기능 설계](#2-기능-설계)
-        - [2.1. 진행 배치 표](#24-진행-배치-표)
     - [3. 트러블 슈팅](#3-트러블-슈팅)
         - [3.1. 사용자 주문 조회에 대한 인덱스 적용 실패](#31-사용자-주문-조회에-대한-인덱스-적용-실패)
         - [3.2. 동시성 제어 테스트 중 불안정한 성공/실패 발생](#32-동시성-제어-테스트-중-불안정한-성공실패-발생)
@@ -43,7 +42,8 @@
 
 ### 1.2. 아키텍쳐
 
-<img width="1839" height="919" alt="Image" src="https://github.com/user-attachments/assets/de212b43-959d-4671-9d7c-86863742ff0c" />
+![image](https://github.com/user-attachments/assets/14d49cc9-2a2f-4bfd-aa97-bc7508254251)
+
 
 ### 1.3. 사용기술
 
@@ -140,11 +140,7 @@
     - **총 매출**: 전체 점포에 대한 총 매출을 확인 할 수 있다
     - **Top10 & Bottom10**: 각 점포의 매출을 Top10 & Bottom10으로 확인 할 수 있다
     - **메뉴 별 판매량**: 전체 메뉴 별 판매량을 확인 할 수 있다
- 
-### 2.4. 진행 배치 표
-<img width="1891" height="845" alt="Image" src="https://github.com/user-attachments/assets/26701a57-1c4f-4b20-9510-876a0a963067" />
-<img width="794" height="734" alt="Image" src="https://github.com/user-attachments/assets/2d64bc6e-e207-4497-9e69-1b90bf3ad88e" />
-<img width="766" height="734" alt="Image" src="https://github.com/user-attachments/assets/be29c6c3-32e1-4678-94a8-23ac6346f3a3" />
+
 
 ## 3. 트러블 슈팅
 
@@ -253,7 +249,7 @@
       커넥션 대기 시간 2 sec  
       <img width="1280" height="566" alt="Image" src="https://github.com/user-attachments/assets/6d0cf9b4-4dec-4e61-a845-b060ed00fc7a" />
     - TPS는 약 8.5배, MTT는 약 10배 가량 성능이 향상되었고, 대기 시간 또한 1/3 가량으로 줄어들어 성능이 개선 됨
-      <img width="776" height="484" alt="image" src="https://github.com/user-attachments/assets/e9c421f4-4539-4e42-918a-47c77780b55a" />
+
 
 
 - **5. 측정 방법/도구**
@@ -340,8 +336,6 @@
 
   평균 응답속도 약 1.7배, p95 약 1.8배, p99 약 1.9배 가량 성능 향상  
   Redis 캐싱을 도입하여 반복 조회되는 데이터의 DB 접근을 줄임으로써 평균 응답속도와 p95, p99 응답속도를 크게 개선
-
-  <img width="720" height="428" alt="Image" src="https://github.com/user-attachments/assets/c2648971-df60-4de0-82ba-0e4e0ba4c441" />
 
 - **4. 측정 방법/도구**
     - nGrinder : 동시 300명 요청
